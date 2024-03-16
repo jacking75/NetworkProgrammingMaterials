@@ -1,0 +1,11 @@
+@startuml
+Client -> SpectatorServer: REQ_WATCHING_NEXT
+
+alt 관전 끝이 아니고 && 관전 데이터가 없다면 case
+SpectatorServer -> Redis: List 자료구조로 지정번호 이후의 데이터 요청
+SpectatorServer <- Redis
+note right SpectatorServer: 메모리에 저장한다.
+end
+
+Client <- SpectatorServer: REQ_WATCHING_NEXT
+@enduml
