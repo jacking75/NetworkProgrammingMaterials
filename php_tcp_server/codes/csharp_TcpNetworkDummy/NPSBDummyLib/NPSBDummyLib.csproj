@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Action\**" />
+    <Compile Remove="Dummys\**" />
+    <Compile Remove="Scenario\Impl\**" />
+    <Compile Remove="TestCase\**" />
+    <EmbeddedResource Remove="Action\**" />
+    <EmbeddedResource Remove="Dummys\**" />
+    <EmbeddedResource Remove="Scenario\Impl\**" />
+    <EmbeddedResource Remove="TestCase\**" />
+    <None Remove="Action\**" />
+    <None Remove="Dummys\**" />
+    <None Remove="Scenario\Impl\**" />
+    <None Remove="TestCase\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="DummyManager_TestCase.cs" />
+    <Compile Remove="Dummy\ConnectOnly.cs" />
+    <Compile Remove="Dummy\RepeatConnect.cs" />
+    <Compile Remove="Dummy_Recv.cs" />
+    <Compile Remove="EchoCondition.cs" />
+    <Compile Remove="ReportData.cs" />
+    <Compile Remove="Scenario\ScenarioBase.cs" />
+    <Compile Remove="TestResultManager.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dotnet.Script.Core" Version="0.50.1" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="1.6.1" />
+    <PackageReference Include="System.Linq" Version="4.3.0" />
+    <PackageReference Include="System.Threading.Channels" Version="4.7.0" />
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.3" />
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+    <PackageReference Include="Utf8Json" Version="1.3.7" />
+  </ItemGroup>
+
+</Project>
