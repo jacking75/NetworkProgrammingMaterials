@@ -1,0 +1,1 @@
+GateWayServer.exe -c_IsTcp4Addr=true -c_BindAddress=127.0.0.1:11021 -c_MaxSessionCount=200 -c_MaxPacketSize=1024 -c_Name=GateWayServer -c_RoomStartNum=0 -c_RoomMaxCount=100 -c_MaxUserCount=300 --c_MyServerIndex=1 --c_ChatServerIndexList=1 --c_ChatServerIndexList=2

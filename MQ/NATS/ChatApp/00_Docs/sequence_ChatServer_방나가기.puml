@@ -1,0 +1,8 @@
+@startuml
+Client -> GateWayServer: PACKET_ID_ROOM_LEAVE_REQ
+
+GateWayServer -> ChatServer: [MQ] REQ_ROOM_LEAVE
+GateWayServer <- ChatServer: [MQ] RES_ROOM_LEAVE
+
+Client <- GateWayServer: PACKET_ID_ROOM_LEAVE_RES
+@enduml

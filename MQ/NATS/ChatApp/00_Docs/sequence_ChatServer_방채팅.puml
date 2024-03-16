@@ -1,0 +1,14 @@
+@startuml
+participant Client_방의_모든_유저
+participant Client
+participant GateWayServer
+participant ChatServer
+
+Client -> GateWayServer: PACKET_ID_ROOM_CHAT_REQ
+
+GateWayServer -> ChatServer: [MQ] RELAY
+GateWayServer <- ChatServer: [MQ] RELAY
+
+Client <- GateWayServer: PACKET_ID_ROOM_CHAT_RES
+Client_방의_모든_유저 <- GateWayServer: PACKET_ID_ROOM_CHAT_NOTIFY
+@enduml

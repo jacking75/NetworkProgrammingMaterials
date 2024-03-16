@@ -1,0 +1,1 @@
+dotnet netcoreapp2.2\DBServer.dll --serverIndex 0 --name DBServer --reqWorkerThreadCount 2 --dbAddres 127.0.0.1 --mqServerAddress 127.0.0.1 --subject DB --qGroup main

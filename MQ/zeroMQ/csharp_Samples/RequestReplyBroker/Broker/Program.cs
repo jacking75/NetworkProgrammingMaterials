@@ -1,0 +1,39 @@
+﻿using System;
+using NetMQ;
+using NetMQ.Sockets;
+
+
+namespace Broker
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Broker");
+
+            using (var frontend = new RouterSocket("@tcp://127.0.0.1:11021"))
+            using (var backend = new DealerSocket("@tcp://127.0.0.1:11022"))
+            {
+                // Handler for messages coming in to the frontend
+                frontend.ReceiveReady += (s, e) =>
+                {
+                    var msg = e.Socket.ReceiveMultipartMessage();
+                    backend.SendMultipartMessage(msg); // Relay this message to the backend
+                };
+
+                // Handler for messages coming in to the backend
+                backend.ReceiveReady += (s, e) =>
+                {
+                    var msg = e.Socket.ReceiveMultipartMessage();
+                    frontend.SendMultipartMessage(msg); // Relay this message to the frontend
+                };
+
+                using (var poller = new NetMQPoller { backend, frontend })
+                {
+                    // Listen out for events on both sockets and raise events when messages come in
+                    poller.Run();
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.88
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReqRouterServer", "ReqRouterServer.vcxproj", "{362F384D-4CFF-49D8-BDF7-9BC0A8EC2163}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{362F384D-4CFF-49D8-BDF7-9BC0A8EC2163}.Debug|x64.ActiveCfg = Debug|x64
+		{362F384D-4CFF-49D8-BDF7-9BC0A8EC2163}.Debug|x64.Build.0 = Debug|x64
+		{362F384D-4CFF-49D8-BDF7-9BC0A8EC2163}.Debug|x86.ActiveCfg = Debug|Win32
+		{362F384D-4CFF-49D8-BDF7-9BC0A8EC2163}.Debug|x86.Build.0 = Debug|Win32
+		{362F384D-4CFF-49D8-BDF7-9BC0A8EC2163}.Release|x64.ActiveCfg = Release|x64
+		{362F384D-4CFF-49D8-BDF7-9BC0A8EC2163}.Release|x64.Build.0 = Release|x64
+		{362F384D-4CFF-49D8-BDF7-9BC0A8EC2163}.Release|x86.ActiveCfg = Release|Win32
+		{362F384D-4CFF-49D8-BDF7-9BC0A8EC2163}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4887467-C3E1-476E-9071-17E4E110F4A3}
+	EndGlobalSection
+EndGlobal

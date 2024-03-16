@@ -1,0 +1,8 @@
+@startuml
+Client -> GateWayServer: PACKET_ID_LOGIN_REQ
+
+GateWayServer -> MatchServer: MQ: MQ_PACKET_ID_DB_LOGIN_REQ
+GateWayServer <- MatchServer: MQ: MQ_PACKET_ID_DB_LOGIN_RES
+
+Client <- GateWayServer: PACKET_ID_LOGIN_RES
+@enduml

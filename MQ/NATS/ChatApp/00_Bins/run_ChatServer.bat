@@ -1,0 +1,1 @@
+dotnet netcoreapp2.2\ChatServer.dll --serverIndex 21 --name ChatServer --roomMaxCount 10 --roomMaxUserCount 4 --roomStartNumber 0 --mqServerAddress 127.0.0.1 --subject CHAT
