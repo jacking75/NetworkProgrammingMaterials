@@ -1,0 +1,2 @@
+language: csharp
+script: xbuild /p:Configuration=Travis SharpRUDP/SharpRUDP.sln
